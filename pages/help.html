@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&family=Rubik+Mono+One&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>Vinyl Store</title>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="../img/vinyl.png" alt="" />
+                    <span>VinylRec</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <a href="../index.html" class="navbar-links"
+                        ><li class="navbar-items">
+                            Inicio
+                        </li>
+                    </a>
+                    <a href="./about.html" class="navbar-links"
+                        ><li class="navbar-items">
+                            Nosotros
+                        </li></a
+                    >
+                    <a href="./contact.html" class="navbar-links"
+                        ><li class="navbar-items">
+                            Contacto
+                        </li></a
+                    >
+                    <a href="./help.html" class="navbar-links"
+                        ><li class="navbar-items">
+                            Ayuda
+                        </li></a
+                    >
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2 class="form-ayuda-title">Formulario de Ayuda</h2>
+            <form action="" class="form-ayuda">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" />
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" />
+                </div>
+                <div>
+                    <label for="mail">Mail:</label>
+                    <input type="text" name="mail" />
+                </div>
+                <div>
+                    <label for="apellido">Descripción:</label>
+                    <br />
+                    <textarea type="textarea" name="apellido"></textarea>
+                </div>
+                <div>
+                    <label for="categoria">Categoría:</label>
+                    <select name="categoria" id="cat">
+                        <option value="refund">Reembolsos</option>
+                        <option value="sugerencias">Sugerencias</option>
+                        <option value="shipping">Envíos</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="urgente">Urgente:</label>
+                    <input type="checkbox" name="urgente" id="urg" />
+                </div>
+                <div>
+                    <input
+                        type="submit"
+                        value="Enviar"
+                        class="form-ayuda-btn"
+                    />
+                    <input type="reset" value="Reset" class="form-ayuda-btn" />
+                </div>
+            </form>
+        </main>
+        <footer>
+            <p>Copyright 2021 - Matias Cermak</p>
+        </footer>
+    </body>
+</html>
