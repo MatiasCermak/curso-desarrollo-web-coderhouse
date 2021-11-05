@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
+    list-style: none;
     box-sizing: border-box;
 }
 
@@ -13,65 +14,45 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* Header css */
 
-header {
+.header {
     background-color: #f4f1bb;
     position: sticky;
     top: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    height: 50px;
-    z-index: 1;
+    z-index: 2000;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: stretch;
-    height: 100%;
-}
-
-.navbar-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+.logo__link {
+    text-decoration: none;
+    color: #f98948;
+    font-size: 1.3rem;
     font-family: "Rubik Mono One", sans-serif;
+}
+
+.header__button {
+    margin-right: 5px;
+    color: #f98948;
+}
+
+.logo__link:hover {
+    color: #f98948;
+}
+
+.nav-link {
+    color: #f98948;
     font-size: 1.2rem;
-    color: #f98948;
-    padding: 0px 10px;
 }
 
-.navbar-items:hover {
-    background-color: #f98948;
-    color: #f4f1bb;
+.nav-link:hover {
+    color: rgb(255, 255, 255);
 }
 
-.navbar-links {
-    text-decoration-line: none;
-}
-
-#logo a {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-decoration-line: none;
-    align-items: center;
-}
-
-#logo a img {
-    height: 50px;
-}
-
-#logo a span {
+.nav-item {
     font-family: "Rubik Mono One", sans-serif;
-    color: #f98948;
-    font-size: 1.5rem;
 }
 
 /* Index */
@@ -201,6 +182,7 @@ nav ul {
 }
 
 .about p {
+    font-family: "Montserrat", sans-serif;
     width: 50%;
     font-size: 1.3rem;
 }
@@ -213,7 +195,7 @@ nav ul {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 400px;
+    height: 90vh;
 }
 
 .form-items {
@@ -233,9 +215,42 @@ nav ul {
     font-family: "Rubik Mono One", sans-serif;
     background-color: #e6ebe0;
     padding: 10px;
+    margin: 0px;
 }
 
-.form-contacto-btn {
+/* Página de Ayuda */
+
+.main_help {
+    background-color: #e6ebe0;
+}
+
+.main_help__form {
+    margin: 10px;
+}
+
+.title {
+    font-family: "Rubik Mono One", sans-serif;
+    font-size: 1.4rem;
+    margin: 1rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.faq__accordion {
+    background-color: #f4f1bb;
+    margin: 20px;
+}
+
+.form-check {
+    margin: 10px;
+}
+
+.form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.form__btn {
     background-color: #f98948;
     padding: 5px;
     border: 2px solid #f4f1bb;
@@ -245,29 +260,9 @@ nav ul {
     font-size: 1rem;
 }
 
-.form-contacto-btn:hover {
+.form__btn:hover {
     background-color: #f4f1bb;
     color: #f98948;
-}
-
-/* Página de Ayuda */
-
-.form-ayuda {
-    background-color: #e6ebe0;
-    text-align: center;
-}
-
-.form-ayuda-title {
-    text-align: center;
-    font-family: "Rubik Mono One", sans-serif;
-    background-color: #e6ebe0;
-}
-
-.form-ayuda-btn {
-    background-color: #f4f1bb;
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid #f98948;
 }
 
 /* Página de Producto */
