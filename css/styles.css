@@ -1,284 +1,291 @@
-/* CSS General */
-
+/* Paleta de colores */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    list-style: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-footer {
-    background-color: #f4f1bb;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Montserrat", sans-serif;
-}
-
-/* Header css */
-
+/* Global parts */
+/* Paleta de colores */
 .header {
-    background-color: #f4f1bb;
-    position: sticky;
-    top: 0px;
-    z-index: 2000;
+  background-color: #f4f1bb;
+  position: sticky;
+  top: 0px;
+  z-index: 2000;
 }
 
 .logo__link {
-    text-decoration: none;
-    color: #f98948;
-    font-size: 1.3rem;
-    font-family: "Rubik Mono One", sans-serif;
+  text-decoration: none;
+  color: #f98948;
+  font-size: 1.3rem;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .header__button {
-    margin-right: 5px;
-    color: #f98948;
+  margin-right: 5px;
+  color: #f98948;
 }
 
 .logo__link:hover {
-    color: #f98948;
+  color: #f98948;
 }
 
 .nav-link {
-    color: #f98948;
-    font-size: 1.2rem;
+  color: #f98948;
+  font-size: 1.2rem;
 }
-
 .nav-link:hover {
-    color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .nav-item {
-    font-family: "Rubik Mono One", sans-serif;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
-/* Index */
-
-.main-grid {
-    display: grid;
-    grid-template-areas:
-        "banner banner banner banner"
-        "categorias titulo titulo titulo"
-        "categorias productos productos productos";
-    grid-template-rows: 400px auto auto;
-    grid-template-columns: 10% repeat(3, 30%);
+/* Paleta de colores */
+footer {
+  background-color: #f4f1bb;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
 }
 
-.parrafo-cards {
-    background-color: #f4f1bb;
+/* Sass operations */
+/*For the exercise*/
+.f-1 {
+  font-size: 1rem;
+}
+
+.bg-banner-1 {
+  background-image: url("../img/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*For the exercise*/
+.f-2 {
+  font-size: 2rem;
+}
+
+.bg-banner-2 {
+  background-image: url("../img/banner2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*For the exercise*/
+.f-3 {
+  font-size: 3rem;
+}
+
+.bg-banner-3 {
+  background-image: url("../img/banner3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Page Files */
+/* Paleta de colores */
+.main_index {
+  padding: 0px;
+  background-color: #e6ebe0;
 }
 
 .banner {
-    grid-area: banner;
-    background-image: url("../img/clay-banks-fEVaiLwWvlU-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+  height: 400px;
 }
 
-.categorias {
-    grid-area: categorias;
-    background-image: linear-gradient(to bottom, #5ca4a9, #f4f1bb);
+.carousel-item__image {
+  height: 400px;
+  object-fit: cover;
 }
 
 .categorias-list {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style-type: none;
+  height: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .categorias-list-link {
-    color: #f98948;
-    text-decoration: none;
-    font-family: "Rubik Mono One", sans-serif;
+  color: #f98948;
+  text-decoration: none;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .product-title {
-    grid-area: titulo;
-    background-color: #e6ebe0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  background-color: #e6ebe0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-
 .product-title h1 {
-    font-family: "Rubik Mono One", sans-serif;
-    font-size: 3rem;
-    margin: 10px;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 3rem;
+  margin: 10px;
 }
 
 .product-list {
-    grid-area: productos;
-    display: grid;
-    grid-template-columns: repeat(4, 21%);
-    grid-template-rows: repeat(3, 33.3%);
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    background-color: #e6ebe0;
+  background-color: #e6ebe0;
 }
 
 .cards {
-    text-align: center;
-    transition: transform 0.5s;
-    margin: 30px 0px;
+  text-align: center;
+  transition: transform 0.5s;
+  margin: 30px 0px;
 }
-
-.cards:hover {
-    transform: translate(-10px, -10px);
-}
-
-.cards a p {
-    font-size: 1.2rem;
-    position: relative;
-    bottom: 5px;
-}
-
 .cards a {
-    text-decoration-line: none;
+  text-decoration-line: none;
 }
-
+.cards a p {
+  font-size: 1.2rem;
+  position: relative;
+  bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: #f98948;
+  background-color: #f4f1bb;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 45px;
+}
 .cards a img {
-    width: 100%;
-    margin: 0px;
+  width: 100%;
+  margin: 0px;
+  border-radius: 10px 10px 0px 0px;
 }
-
-/* Página de Nosotros */
+.cards:hover {
+  transform: translate(-10px, -10px);
+}
 
 .about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #e6ebe0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e6ebe0;
 }
 
 .about-title {
-    font-family: "Rubik Mono One", sans-serif;
-    font-size: 3rem;
-    margin: 10px;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 3rem;
+  margin: 10px;
 }
 
 .about {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
 }
-
-.about:hover {
-    transform: scale(1.2, 1.2);
-    transition: transform 1s;
-}
-
 .about h1 {
-    font-family: "Rubik Mono One", sans-serif;
-    font-size: 2rem;
-    margin: 10px;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 2rem;
+  margin: 10px;
 }
-
 .about p {
-    font-family: "Montserrat", sans-serif;
-    width: 50%;
-    font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+  font-size: 1.3rem;
 }
-
-/*Página de contacto*/
+.about:hover {
+  transform: scale(1.2, 1.2);
+  transition: transform 1s;
+}
 
 .form-contacto {
-    background-color: #e6ebe0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 90vh;
+  background-color: #e6ebe0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90vh;
 }
 
 .form-items {
-    padding: 10px;
-    border: 0;
-    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-    width: 25%;
-    font-size: 1rem;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  width: 25%;
+  font-size: 1rem;
 }
 
 .items-text {
-    height: 50%;
+  height: 50%;
 }
 
 .form-contacto-title {
-    text-align: center;
-    font-family: "Rubik Mono One", sans-serif;
-    background-color: #e6ebe0;
-    padding: 10px;
-    margin: 0px;
+  text-align: center;
+  font-family: "Rubik Mono One", sans-serif;
+  background-color: #e6ebe0;
+  padding: 10px;
+  margin: 0px;
 }
 
-/* Página de Ayuda */
-
+/* Paleta de colores */
 .main_help {
-    background-color: #e6ebe0;
+  background-color: #e6ebe0;
 }
 
 .main_help__form {
-    margin: 10px;
+  margin: 10px;
 }
 
 .title {
-    font-family: "Rubik Mono One", sans-serif;
-    font-size: 1.4rem;
-    margin: 1rem;
-    text-decoration: underline;
-    text-align: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 1.4rem;
+  margin: 1rem;
+  text-decoration: underline;
+  text-align: center;
 }
 
 .faq__accordion {
-    background-color: #f4f1bb;
-    margin: 20px;
+  background-color: #f4f1bb;
+  margin: 20px;
 }
 
 .form-check {
-    margin: 10px;
+  margin: 10px;
 }
 
 .form-check-input {
-    width: 1.2rem;
-    height: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .form__btn {
-    background-color: #f98948;
-    padding: 5px;
-    border: 2px solid #f4f1bb;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 1rem;
+  background-color: #f98948;
+  padding: 5px;
+  border: 2px solid #f4f1bb;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 .form__btn:hover {
-    background-color: #f4f1bb;
-    color: #f98948;
+  background-color: #f4f1bb;
+  color: #f98948;
 }
 
-/* Página de Producto */
-
+/* Paleta de colores */
 .product-container h1 {
-    background-color: #e6ebe0;
-    text-align: center;
-    font-family: "Rubik Mono One", sans-serif;
-    color: #f98948;
+  background-color: #e6ebe0;
+  text-align: center;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #f98948;
 }
 
 .product-data {
-    background-color: #e6ebe0;
-    padding: 10px;
+  background-color: #e6ebe0;
+  padding: 10px;
 }
 
 .product-description {
-    background-color: #e6ebe0;
+  background-color: #e6ebe0;
 }
+
+/*# sourceMappingURL=styles.css.map */

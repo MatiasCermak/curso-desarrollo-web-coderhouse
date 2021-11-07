@@ -1,0 +1,77 @@
+@import "globalVars";
+
+.main_index {
+    padding: 0px;
+    background-color: $grey;
+}
+
+.banner {
+    height: 400px;
+}
+
+.carousel-item__image {
+    height: 400px;
+    object-fit: cover;
+}
+
+.categorias-list {
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.categorias-list-link {
+    color: $orange;
+    text-decoration: none;
+    font-family: $title-font;
+}
+
+.product-title {
+    background-color: $grey;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        font-family: $title-font;
+        font-size: 3rem;
+        margin: 10px;
+    }
+}
+
+.product-list {
+    background-color: $grey;
+}
+
+.cards {
+    text-align: center;
+    transition: transform 0.5s;
+    margin: 30px 0px;
+
+    a {
+        text-decoration-line: none;
+
+        p {
+            font-size: 1.2rem;
+            position: relative;
+            bottom: 5px;
+            font-family: $text-font;
+            color: $orange;
+            background-color: $yellow;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            height: 45px;
+        }
+
+        img {
+            width: 100%;
+            margin: 0px;
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+
+    &:hover {
+        transform: translate(-10px, -10px);
+    }
+}

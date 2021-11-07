@@ -1,0 +1,37 @@
+@import "globalVars";
+
+.header {
+    background-color: $yellow;
+    position: sticky;
+    top: 0px;
+    z-index: 2000;
+}
+
+.logo__link {
+    text-decoration: none;
+    color: $orange;
+    font-size: 1.3rem;
+    font-family: $title-font;
+}
+
+.header__button {
+    margin-right: 5px;
+    color: $orange;
+}
+
+.logo__link:hover {
+    color: $orange;
+}
+
+.nav-link {
+    color: $orange;
+    font-size: 1.2rem;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.nav-item {
+    font-family: $title-font;
+}

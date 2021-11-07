@@ -1,0 +1,10 @@
+@import "globalVars";
+
+footer {
+    background-color: $yellow;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $text-font;
+}

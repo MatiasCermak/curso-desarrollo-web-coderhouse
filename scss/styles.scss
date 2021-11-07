@@ -1,0 +1,15 @@
+@import "reset";
+
+/* Global parts */
+@import "header";
+@import "footer";
+
+/* Sass operations */
+@import "sassOperations";
+
+/* Page Files */
+@import "index";
+@import "about";
+@import "contact";
+@import "help";
+@import "product";

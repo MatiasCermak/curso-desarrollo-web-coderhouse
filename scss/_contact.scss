@@ -1,0 +1,28 @@
+.form-contacto {
+    background-color: #e6ebe0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
+}
+
+.form-items {
+    padding: 10px;
+    border: 0;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    width: 25%;
+    font-size: 1rem;
+}
+
+.items-text {
+    height: 50%;
+}
+
+.form-contacto-title {
+    text-align: center;
+    font-family: "Rubik Mono One", sans-serif;
+    background-color: #e6ebe0;
+    padding: 10px;
+    margin: 0px;
+}

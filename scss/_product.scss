@@ -1,0 +1,19 @@
+@import "globalVars";
+
+.product-container {
+    h1 {
+        background-color: $grey;
+        text-align: center;
+        font-family: $title-font;
+        color: $orange;
+    }
+}
+
+.product-data {
+    background-color: $grey;
+    padding: 10px;
+}
+
+.product-description {
+    background-color: $grey;
+}

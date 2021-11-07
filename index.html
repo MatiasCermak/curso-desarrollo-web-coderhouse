@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -47,11 +48,25 @@
                 </ul>
             </nav>
         </header>
-        <main class="main-grid">
-            <div class="banner"></div>
+        <main class="container-fluid main_index">
+            <div class="banner row">
+                <div id="carouselExampleControls" class="carousel slide w-100" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100">
+                        <div class="carousel-item w-100 active">
+                            <div class="d-flex carousel-item__image w-100 bg-banner-1"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex carousel-item__image w-100 bg-banner-2"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex carousel-item__image w-100 bg-banner-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Acá va el Banner -->
-            <aside class="categorias">
-                <ul class="categorias-list">
+            <aside class="row">
+                <ul class="categorias-list d-flex flex-row flew-wrap">
                     <li class="categorias-list-item">
                         <a href="#" class="categorias-list-link">Pop</a>
                     </li>
@@ -81,78 +96,102 @@
             <div class="product-title">
                 <h1>Nuestros Discos Disponibles</h1>
             </div>
-            <section class="product-list">
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc1.png" />
-                        <p class="parrafo-cards">Tame Impala - The Slow Rush</p>
-                    </a>
+            <section class="row row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc1.png" />
+                            <p class="parrafo-cards">Tame Impala - The Slow Rush</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc2.jpg" />
-                        <p class="parrafo-cards">Gorillaz - Plastic Beach</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc2.jpg" />
+                            <p class="parrafo-cards">Gorillaz - Plastic Beach</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc3.jpg" />
-                        <p class="parrafo-cards">DIO - Holy Diver</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc3.jpg" />
+                            <p class="parrafo-cards">DIO - Holy Diver</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc4.jpg" />
-                        <p class="parrafo-cards">King Crimson - In the Court of the Crimson King</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc4.jpg" />
+                            <p class="parrafo-cards">King Crimson - In the Court of the Crimson King</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc5.jpg" />
-                        <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc5.jpg" />
+                            <p class="parrafo-cards">Pink Floyd - Wish You Were Here</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc6.jpg" />
-                        <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc6.jpg" />
+                            <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc7.jpg" />
-                        <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc7.jpg" />
+                            <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc8.jpg" />
-                        <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc8.jpg" />
+                            <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc9.jpg" />
-                        <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc9.jpg" />
+                            <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc1.png" />
-                        <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc10.jpg" />
+                            <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc2.jpg" />
-                        <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc11.jpg" />
+                            <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cards">
-                    <a href="./pages/product.html">
-                        <img src="./img/disc3.jpg" />
-                        <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </a>
+                <div class="col">
+                    <div class="cards">
+                        <a href="./pages/product.html">
+                            <img src="./img/disc12.jpg" />
+                            <p class="parrafo-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
                 </div>
             </section>
         </main>

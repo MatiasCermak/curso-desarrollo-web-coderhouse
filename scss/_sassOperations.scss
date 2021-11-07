@@ -1,0 +1,12 @@
+@for $i from 1 through 3 {
+    /*For the exercise*/
+    .f-#{$i} {
+        font-size: 1rem * $i;
+    }
+
+    .bg-banner-#{$i} {
+        background-image: url("../img/banner#{$i}.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+}
