@@ -48,25 +48,35 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <div class="product-container">
-                <h1>Wish You Were Here</h1>
-                <!--Aca iría una imagen del producto-->
-                <div class="product-data">
-                    <ul>
-                        <li>Año: 1975</li>
-                        <li>Género: Progressive Rock</li>
-                        <li>Artista: Pink Floyd</li>
-                        <li>Rating: *****</li>
-                    </ul>
+        <main class="main_product">
+            <div class="main_product__container container-fluid">
+                <div class="row">
+                    <h1>Wish You Were Here</h1>
                 </div>
-                <div class="product-description">
-                    <h4>Descripción</h4>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum alias dolores aspernatur
-                        consectetur, error eveniet veritatis tempora vitae accusantium libero sequi voluptate quibusdam
-                        perferendis, iure ducimus! Rerum maiores placeat dolore.
-                    </p>
+                <div class="row">
+                    <div class="col-xs-12 col-xl-6"><img src="../img/disc5.jpg" alt="" /></div>
+                    <div class="product_data col col-xs-12 col-xl-6 d-flex flex-column justify-content-center">
+                        <div class="product_data__characteristics d-flex flex-column">
+                            <h4>Características</h4>
+                            <ul>
+                                <li>Año: 1975</li>
+                                <li>Género: Progressive Rock</li>
+                                <li>Artista: Pink Floyd</li>
+                                <li>Rating: *****</li>
+                            </ul>
+                        </div>
+                        <div class="product_data__description">
+                            <h4>Descripción</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum alias dolores aspernatur
+                                consectetur, error eveniet veritatis tempora vitae accusantium libero sequi voluptate
+                                quibusdam perferendis, iure ducimus! Rerum maiores placeat dolore.
+                            </p>
+                        </div>
+                        <div class="product_data__buy_btn d-flex justify-content-center">
+                            <input type="button" class="form__btn" value="Comprar!" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

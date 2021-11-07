@@ -272,20 +272,29 @@ footer {
 }
 
 /* Paleta de colores */
-.product-container h1 {
+.main_product {
   background-color: #e6ebe0;
+  margin: 0px;
+}
+
+.main_product__container h1 {
   text-align: center;
   font-family: "Rubik Mono One", sans-serif;
   color: #f98948;
+  margin-top: 10px;
+}
+.main_product__container img {
+  border-radius: 20px;
+  width: 100%;
+  padding: 30px;
 }
 
-.product-data {
+.product_data {
   background-color: #e6ebe0;
   padding: 10px;
 }
-
-.product-description {
-  background-color: #e6ebe0;
+.product_data ul li {
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
