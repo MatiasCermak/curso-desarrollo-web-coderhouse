@@ -55,20 +55,28 @@
         </header>
         <main>
             <h2 class="form-contacto-title">Formulario de Contacto</h2>
-            <form action="" class="form-contacto">
-                <input class="form-items" type="text" name="nombre" placeholder="Nombre" />
-                <input class="form-items" type="text" name="apellido" placeholder="Apellido" />
-                <input class="form-items" type="text" name="mail" placeholder="Email" />
-                <textarea
-                    class="form-items items-text"
-                    type="textarea"
-                    name="descripcion"
-                    placeholder="Descripción"
-                ></textarea>
-                <div class="form__button-group">
+            <form action="" class="form-contacto d-flex flex-column justify-content-center">
+                <div class="mb-3 input-group-lg">
+                    <label for="inputName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="inputName" />
+                </div>
+                <div class="mb-3 input-group-lg">
+                    <label for="inputLastName" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="inputLastName" />
+                </div>
+                <div class="mb-3 input-group-lg">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control email" id="inputEmail" aria-describedby="emailHelp" />
+                </div>
+                <div class="mb-3 input-group-lg">
+                    <label for="inputText" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="inputText" cols="22" rows="10"></textarea>
+                </div>
+                <div class="form__button_group d-flex justify-content-center">
                     <input type="submit" value="Enviar" class="form__btn" />
                     <input type="reset" value="Reset" class="form__btn" />
                 </div>
+            </form>
             </form>
         </main>
         <footer>
