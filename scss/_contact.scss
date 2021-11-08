@@ -1,5 +1,5 @@
 .form-contacto {
-    background-color: #e6ebe0;
+    background-color: $grey;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,8 +21,8 @@
 
 .form-contacto-title {
     text-align: center;
-    font-family: "Rubik Mono One", sans-serif;
-    background-color: #e6ebe0;
+    font-family: $title-font;
+    background-color: $grey;
     padding: 10px;
     margin: 0px;
 }
