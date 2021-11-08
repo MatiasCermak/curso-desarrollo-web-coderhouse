@@ -35,7 +35,7 @@
 
     h1 {
         font-family: $title-font;
-        font-size: 3rem;
+
         margin: 10px;
     }
 }
@@ -47,7 +47,6 @@
 .cards {
     text-align: center;
     transition: transform 0.5s;
-    margin: 30px 0px;
 
     a {
         text-decoration-line: none;
