@@ -23,9 +23,23 @@
 .product_data {
     background-color: $grey;
     padding: 10px;
+    h4 {
+        font-family: $title-font;
+    }
     ul {
         li {
-            font-family: $title-font;
+            font-family: $text-font;
+            font-size: 1.2rem;
         }
+    }
+}
+
+.product_data__description {
+    h4 {
+        font-family: $title-font;
+    }
+    p {
+        font-family: $text-font;
+        font-size: 1.2rem;
     }
 }

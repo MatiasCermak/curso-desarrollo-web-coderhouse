@@ -349,8 +349,20 @@ footer {
   background-color: #e6ebe0;
   padding: 10px;
 }
-.product_data ul li {
+.product_data h4 {
   font-family: "Rubik Mono One", sans-serif;
+}
+.product_data ul li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+}
+
+.product_data__description h4 {
+  font-family: "Rubik Mono One", sans-serif;
+}
+.product_data__description p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
