@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="../css/styles.css" />
         <title>Vinyl Store - Contactanos</title>
     </head>
-    <body>
+    <body class="expanded_body">
         <header class="navbar navbar-expand-md shadow header">
             <div class="header__logo">
                 <a href="../index.html" class="navbar-brand logo__link">
@@ -53,32 +53,34 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="main_contact">
             <h2 class="form-contacto-title">Formulario de Contacto</h2>
-            <form action="" class="form-contacto d-flex flex-column justify-content-center">
-                <div class="mb-3 input-group-lg">
-                    <label for="inputName" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="inputName" />
-                </div>
-                <div class="mb-3 input-group-lg">
-                    <label for="inputLastName" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="inputLastName" />
-                </div>
-                <div class="mb-3 input-group-lg">
-                    <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control email" id="inputEmail" aria-describedby="emailHelp" />
-                </div>
-                <div class="mb-3 input-group-lg">
-                    <label for="inputText" class="form-label">Descripción</label>
-                    <textarea class="form-control" id="inputText" cols="22" rows="10"></textarea>
-                </div>
-                <div class="form__button_group d-flex justify-content-center">
-                    <input type="submit" value="Enviar" class="form__btn" />
-                    <input type="reset" value="Reset" class="form__btn" />
-                </div>
-            </form>
-            </form>
+            <div class="form_contact__body">
+                <form action="" class="form-contacto d-flex flex-column justify-content-center">
+                    <div class="mb-3 input-group-lg">
+                        <label for="inputName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputName" />
+                    </div>
+                    <div class="mb-3 input-group-lg">
+                        <label for="inputLastName" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="inputLastName" />
+                    </div>
+                    <div class="mb-3 input-group-lg">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control email" id="inputEmail" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="mb-3 input-group-lg">
+                        <label for="inputText" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="inputText" cols="22" rows="10"></textarea>
+                    </div>
+                    <div class="form__button_group d-flex justify-content-center">
+                        <input type="submit" value="Enviar" class="form__btn" />
+                        <input type="reset" value="Reset" class="form__btn" />
+                    </div>
+                </form>
+            </div>
         </main>
+        <div style="flex-grow: 1"></div>
         <footer>
             <p>Copyright 2021 - Matias Cermak</p>
         </footer>

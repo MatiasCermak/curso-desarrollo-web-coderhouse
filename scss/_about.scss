@@ -7,8 +7,8 @@
 
 .about-title {
     font-family: $title-font;
-    font-size: 3rem;
-    margin: 10px;
+    font-size: 3.5rem;
+    margin: 20px;
 }
 
 .about {
@@ -16,7 +16,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
+    margin: 60px;
+    transition: transform 1s;
 
     h1 {
         font-family: $title-font;
@@ -26,12 +27,11 @@
 
     p {
         font-family: $text-font;
-        width: 50%;
-        font-size: 1.3rem;
+        width: 80vw;
+        font-size: 1.5rem;
     }
 
     &:hover {
-        transform: scale(1.2, 1.2);
-        transition: transform 1s;
+        transform: scale(1.1, 1.1);
     }
 }

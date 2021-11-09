@@ -23,7 +23,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./css/styles.css" />
-        <title>Vinyl Store - Vinyls Near You</title>
+        <title>Vinyl Store - Vinilos cerca tuyo</title>
     </head>
     <body>
         <header class="navbar navbar-expand-md shadow header">
@@ -54,24 +54,57 @@
             </nav>
         </header>
         <main class="container-fluid main_index">
-            <div class="banner row">
-                <div id="carouselExampleControls" class="carousel slide w-100" data-bs-ride="carousel">
+            <div class="banner d-flex flex-wrap">
+                <div id="carouselExampleControls" class="carousel slide w-100 carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner w-100">
-                        <div class="carousel-item w-100 active">
-                            <div class="d-flex carousel-item__image w-100 bg-banner-1"></div>
+                        <div class="carousel-item w-100 active" data-bs-interval="2000">
+                            <div
+                                class="
+                                    d-flex
+                                    carousel-item__image
+                                    w-100
+                                    bg-banner-1
+                                    align-items-center
+                                    justify-content-center
+                                "
+                            >
+                                <p class="fs-2">Esos grandes momentos</p>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="d-flex carousel-item__image w-100 bg-banner-2"></div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div
+                                class="
+                                    d-flex
+                                    carousel-item__image
+                                    w-100
+                                    bg-banner-2
+                                    align-items-center
+                                    justify-content-center
+                                "
+                            >
+                                <p class="fs-2">Vivilos otra vez</p>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="d-flex carousel-item__image w-100 bg-banner-3"></div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div
+                                class="
+                                    d-flex
+                                    carousel-item__image
+                                    w-100
+                                    bg-banner-3
+                                    align-items-center
+                                    justify-content-center
+                                "
+                            >
+                                <p class="fs-2">Con nosotros</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Acá va el Banner -->
-            <section class="row categories">
-                <ul class="categories__list d-flex flex-row flex-wrap justify-content-around">
+            <section class="d-flex flex-wrap categories">
+                <ul class="categories__list d-flex flex-row flex-wrap justify-content-around w-100">
                     <li class="categorias-list-item">
                         <a href="#" class="categorias-list-link">Pop</a>
                     </li>
@@ -101,7 +134,9 @@
             <div class="product-title">
                 <h1 class="fs-1">Nuestros Discos Disponibles</h1>
             </div>
-            <section class="row row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+            <section
+                class="d-flex flex-wrap row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 product-list"
+            >
                 <div class="col">
                     <div class="cards">
                         <a href="./pages/product.html">
@@ -146,7 +181,7 @@
                     <div class="cards">
                         <a href="./pages/product.html">
                             <img src="./img/disc6.jpg" />
-                            <p class="parrafo-cards fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="parrafo-cards fs-5">Fleetwood Mac - Rumours</p>
                         </a>
                     </div>
                 </div>
@@ -154,7 +189,7 @@
                     <div class="cards">
                         <a href="./pages/product.html">
                             <img src="./img/disc7.jpg" />
-                            <p class="parrafo-cards fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="parrafo-cards fs-5">Ariana Grande - Sweetener</p>
                         </a>
                     </div>
                 </div>
@@ -162,7 +197,7 @@
                     <div class="cards">
                         <a href="./pages/product.html">
                             <img src="./img/disc8.jpg" />
-                            <p class="parrafo-cards fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="parrafo-cards fs-5">David Bowie - Aladdin Sane</p>
                         </a>
                     </div>
                 </div>
@@ -170,7 +205,7 @@
                     <div class="cards">
                         <a href="./pages/product.html">
                             <img src="./img/disc9.jpg" />
-                            <p class="parrafo-cards fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="parrafo-cards fs-5">Pink Floyd - The Dark Side Of The Moon</p>
                         </a>
                     </div>
                 </div>
@@ -178,7 +213,7 @@
                     <div class="cards">
                         <a href="./pages/product.html">
                             <img src="./img/disc10.jpg" />
-                            <p class="parrafo-cards fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="parrafo-cards fs-5">Joy Division - Unknown Pleasures</p>
                         </a>
                     </div>
                 </div>
@@ -186,7 +221,7 @@
                     <div class="cards">
                         <a href="./pages/product.html">
                             <img src="./img/disc11.jpg" />
-                            <p class="parrafo-cards fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="parrafo-cards fs-5">Frank Sinatra - Come Fly With Me</p>
                         </a>
                     </div>
                 </div>
@@ -194,7 +229,7 @@
                     <div class="cards">
                         <a href="./pages/product.html">
                             <img src="./img/disc12.jpg" />
-                            <p class="parrafo-cards fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="parrafo-cards fs-5">Frank Ocean - Blond</p>
                         </a>
                     </div>
                 </div>

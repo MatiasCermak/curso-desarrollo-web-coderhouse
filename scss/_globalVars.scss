@@ -13,3 +13,10 @@ $white: #ffffff;
 $title-font: "Rubik Mono One", sans-serif;
 
 $text-font: "Montserrat", sans-serif;
+
+.expanded_body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: $grey;
+}

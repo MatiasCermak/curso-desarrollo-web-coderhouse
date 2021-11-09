@@ -12,11 +12,17 @@
 .carousel-item__image {
     height: 400px;
     object-fit: cover;
+
+    p {
+        font-family: $title-font;
+        color: $white;
+    }
 }
 
 .categories__list {
     height: 100%;
     list-style-type: none;
+    padding-left: 0px;
 }
 
 .categorias-list-link {
@@ -45,7 +51,7 @@
 .cards {
     text-align: center;
     transition: transform 0.5s;
-    margin: 20px;
+    margin: 5px;
 
     a {
         text-decoration-line: none;
