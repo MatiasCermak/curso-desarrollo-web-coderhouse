@@ -38,7 +38,8 @@ Primero utilicé varias palabras referidas a nuestro producto, ya que es importa
 
 ### Servicios detallados: 
 #### 1. Diseño Web: 
-* Confección de boceto para definir la estructura del sitio adaptable a dispositivos. ● El cliente verifica el boceto. Se acuerdan fuentes, colores y entregas de contenidos. 
+* Confección de boceto para definir la estructura del sitio adaptable a dispositivos. 
+* El cliente verifica el boceto. Se acuerdan fuentes, colores y entregas de contenidos. 
 * Elección de paleta de colores, imágenes, fuentes e iconos. 
 * Diseño de secciones. 
 #### 2. Desarrollo Web: 
