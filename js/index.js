@@ -73,55 +73,86 @@ const VINYLS = [
     },
 ];
 
-VINYLS.forEach((element) => {
+//Clase con operaciones de
+class ProductCart {
+    constructor() {
+        this.list = [];
+    }
+
+    init() {
+        let cartString = window.localStorage.getItem("vinylrec-cart");
+        if (cartString != null || cartString != "") {
+            this.list = JSON.parse(cartString);
+            this.render();
+        }
+    }
+
+    save() {
+        let cartString = JSON.stringify(this.list);
+        window.localStorage.setItem("vinylrec-cart", cartString);
+    }
+
+    append(index) {
+        let product = VINYLS[index];
+        this.list.push(product);
+        this.save();
+        this.render();
+    }
+
+    clear() {
+        this.list = [];
+        this.save();
+    }
+
+    delete(index) {
+        this.list.splice(index, 1);
+        this.save();
+        this.render();
+    }
+
+    render() {
+        let shopcartList = document.getElementById("shopcart_list");
+        shopcartList.innerHTML = "";
+        this.list.forEach((element, index) => {
+            let elem = document.createElement("li");
+            elem.innerHTML = `<div class="dropdown-item d-flex justify-content-between"><div href="#">${element.artist} - ${element.title} | Precio: ${element.price}</div><a href="#" id="${index}"><span class="material-icons" >
+            close
+            </span></a></div>`;
+            elem.children[0].children[1].addEventListener("click", deleteFromCart);
+            shopcartList.appendChild(elem);
+        });
+    }
+}
+
+let shopCart = new ProductCart();
+
+shopCart.init();
+
+VINYLS.forEach((element, index) => {
     let container = document.createElement("div");
     container.classList.add("col");
     const vinylCard = `
     <div class="cards">
         <a href="./pages/product.html">
             <img src="${element.image}" />
-            <p class="parrafo-cards fs-5">${element.artist} - ${element.title}</p>
+            <p class="parrafo-cards fs-5" id="${index}">${element.artist} - ${element.title}</p>
         </a>
     </div>`;
     container.innerHTML = vinylCard;
+    container.children[0].children[0].children[1].addEventListener("click", addToCart);
     document.getElementsByClassName("product-list")[0].appendChild(container);
 });
 
-let menu = () => {
-    alert("Bienvenido/a a la tienda!");
-    let sum = 0;
-    let quantity = 0;
-    let option = 0;
-    while (option != 3) {
-        option = prompt(
-            "Para ingresar discos al carrito, ingrese 1, para finalizar su compra, presione 2, para salir, presione 3"
-        );
+//Event listeners
 
-        switch (option) {
-            case "1":
-                let index = -1;
-                while (index != 0) {
-                    index = prompt(
-                        "Ingresa un número del 1 al 12 para ingresar un vinilo al carrito, para terminar tu selección, presiona 0."
-                    );
-                    if (index >= 1 && index <= 12) {
-                        sum += VINYLS[parseInt(index) - 1].price;
-                        quantity++;
-                    } else if (index == 0) break;
-                    else alert("Por favor, ingresa un número entre 0 y 12");
-                }
-                break;
-            case "2":
-                alert(`El precio total por los ${quantity} discos será ${sum}`);
-                break;
-            case "3":
-                alert("Gracias por usar nuestro servicio! Vuelva pronto!");
-                break;
-            default:
-                alert("Por favor, ingrese un valor del 1 al 3");
-                break;
-        }
-    }
-};
+function addToCart(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    shopCart.append(e.target.id);
+}
 
-menu();
+function deleteFromCart(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    shopCart.delete(e.target.id);
+}
