@@ -111,16 +111,15 @@ class ProductCart {
     }
 
     render() {
-        let shopcartList = document.getElementById("shopcart_list");
-        shopcartList.innerHTML = "";
+        $("#shopcart_list").html("");
         this.list.forEach((element, index) => {
             let elem = document.createElement("li");
-            elem.innerHTML = `<div class="dropdown-item d-flex justify-content-between"><div href="#">${element.artist} - ${element.title} | Precio: ${element.price}</div><a href="#" id="${index}"><span class="material-icons" >
+            elem.innerHTML = `<div class="dropdown-item d-flex justify-content-between"><div href="#">${element.artist} - ${element.title} | Precio: ${element.price}</div><span class="delete_item material-icons" id="${index}">
             close
-            </span></a></div>`;
-            elem.children[0].children[1].addEventListener("click", deleteFromCart);
-            shopcartList.appendChild(elem);
+            </span></div>`;
+            $("#shopcart_list").append(elem);
         });
+        $(".delete_item").on("click", deleteFromCart);
     }
 }
 
@@ -148,11 +147,12 @@ VINYLS.forEach((element, index) => {
 function addToCart(e) {
     e.preventDefault();
     e.stopPropagation();
-    shopCart.append(e.target.id);
+    shopCart.append(parseInt(e.target.id));
 }
 
 function deleteFromCart(e) {
     e.preventDefault();
     e.stopPropagation();
-    shopCart.delete(e.target.id);
+    console.log(e.target.id);
+    shopCart.delete(parseInt(e.target.id));
 }
