@@ -58,12 +58,10 @@
 
         p {
             position: relative;
-            bottom: 5px;
             font-family: $text-font;
             color: $orange;
             background-color: $yellow;
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
+            margin: 0px;
             height: 55px;
         }
 
@@ -72,9 +70,46 @@
             margin: 0px;
             border-radius: 10px 10px 0px 0px;
         }
+
+        div {
+            margin: 0px;
+            padding: 5px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color: $yellow;
+
+            button {
+                color: $white;
+                background-color: $orange;
+                padding: 5px;
+                border: 2px solid $yellow;
+                width: 125px;
+                height: 40px;
+                border-radius: 10px;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: $yellow;
+                    color: $orange;
+                    border: 2px solid $orange;
+                }
+            }
+        }
     }
 
     &:hover {
-        transform: translate(-10px, -10px);
+        transform: translate(-5px, -5px);
+    }
+}
+
+#dropdownMenuButton1 {
+    background-color: $orange;
+}
+.dropdown-menu {
+    max-height: 200px;
+    width: 40vw;
+    overflow-y: scroll;
+    li {
+        width: 100%;
     }
 }

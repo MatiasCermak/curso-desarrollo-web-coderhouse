@@ -1,77 +1,4 @@
-const VINYLS = [
-    {
-        title: "The Slow Rush",
-        artist: "Tame Impala",
-        image: "./img/disc1.png",
-        price: 1300,
-    },
-    {
-        title: "Plastic Beach",
-        artist: "Gorillaz",
-        image: "./img/disc2.jpg",
-        price: 1100,
-    },
-    {
-        title: "In The Court Of The Crimson King",
-        artist: "King Crimson",
-        image: "./img/disc4.jpg",
-        price: 1500,
-    },
-    {
-        title: "Holy Diver",
-        artist: "DIO",
-        image: "./img/disc3.jpg",
-        price: 1500,
-    },
-    {
-        title: "Wish You Were Here",
-        artist: "Pink Floyd",
-        image: "./img/disc5.jpg",
-        price: 1700,
-    },
-    {
-        title: "Rumours",
-        artist: "Fleetwood Mac",
-        image: "./img/disc6.jpg",
-        price: 1300,
-    },
-    {
-        title: "Sweetener",
-        artist: "Ariana Grande",
-        image: "./img/disc7.jpg",
-        price: 1200,
-    },
-    {
-        title: "Aladdin Sane",
-        artist: "David Bowie",
-        image: "./img/disc8.jpg",
-        price: 1000,
-    },
-    {
-        title: "The Dark Side Of The Moon",
-        artist: "Pink Floyd",
-        image: "./img/disc9.jpg",
-        price: 1800,
-    },
-    {
-        title: "Unknown Pleasures",
-        artist: "Joy Division",
-        image: "./img/disc10.jpg",
-        price: 1300,
-    },
-    {
-        title: "Come Fly With Me",
-        artist: "Frank Sinatra",
-        image: "./img/disc11.jpg",
-        price: 1550,
-    },
-    {
-        title: "Blond",
-        artist: "Frank Ocean",
-        image: "./img/disc12.jpg",
-        price: 1300,
-    },
-];
+const VINYLS_URL = "../data/products.json";
 
 //Clase con operaciones de
 class ProductCart {
@@ -92,8 +19,7 @@ class ProductCart {
         window.localStorage.setItem("vinylrec-cart", cartString);
     }
 
-    append(index) {
-        let product = VINYLS[index];
+    append(product) {
         this.list.push(product);
         this.save();
         this.render();
@@ -111,14 +37,21 @@ class ProductCart {
     }
 
     render() {
+        let counter = 0;
+        let totalSum = 0;
         $("#shopcart_list").html("");
         this.list.forEach((element, index) => {
+            totalSum += element.price;
+            counter += 1;
             let elem = document.createElement("li");
             elem.innerHTML = `<div class="dropdown-item d-flex justify-content-between"><div href="#">${element.artist} - ${element.title} | Precio: ${element.price}</div><span class="delete_item material-icons" id="${index}">
             close
             </span></div>`;
             $("#shopcart_list").append(elem);
         });
+        let elem = document.createElement("li");
+        elem.innerHTML = `<div class="dropdown-item d-flex justify-content-between">Cantidad de productos: ${counter} | Total: ${totalSum}</div>`;
+        $("#shopcart_list").append(elem);
         $(".delete_item").on("click", deleteFromCart);
     }
 }
@@ -127,19 +60,27 @@ let shopCart = new ProductCart();
 
 shopCart.init();
 
-VINYLS.forEach((element, index) => {
-    let container = document.createElement("div");
-    container.classList.add("col");
-    const vinylCard = `
-    <div class="cards">
-        <a href="./pages/product.html">
-            <img src="${element.image}" />
-            <p class="parrafo-cards fs-5" id="${index}">${element.artist} - ${element.title}</p>
-        </a>
-    </div>`;
-    container.innerHTML = vinylCard;
-    container.children[0].children[0].children[1].addEventListener("click", addToCart);
-    document.getElementsByClassName("product-list")[0].appendChild(container);
+$.ajax({
+    url: VINYLS_URL,
+    dataType: "json",
+    success: function (data) {
+        var items = [];
+        data.forEach((element, index) => {
+            let container = document.createElement("div");
+            container.classList.add("col");
+            const vinylCard = `
+            <div class="cards">
+                <a href="./pages/product.html">
+                    <img src="${element.image}" />
+                    <p class="parrafo-cards fs-5">${element.artist} - ${element.title}</p>
+                    <div class="card__btn-container"><button class="card__btn" id="${index}"> Añadir al carrito </button></div>
+                </a>
+            </div>`;
+            container.innerHTML = vinylCard;
+            container.children[0].children[0].children[2].children[0].addEventListener("click", addToCart);
+            document.getElementsByClassName("product-list")[0].appendChild(container);
+        });
+    },
 });
 
 //Event listeners
@@ -147,9 +88,14 @@ VINYLS.forEach((element, index) => {
 function addToCart(e) {
     e.preventDefault();
     e.stopPropagation();
-    shopCart.append(parseInt(e.target.id));
+    $.ajax({
+        url: VINYLS_URL,
+        dataType: "json",
+        success: function (data) {
+            shopCart.append(data[parseInt(e.target.id)]);
+        },
+    });
 }
-
 function deleteFromCart(e) {
     e.preventDefault();
     e.stopPropagation();

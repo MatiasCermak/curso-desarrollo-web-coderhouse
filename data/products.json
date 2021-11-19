@@ -1,0 +1,74 @@
+[
+    {
+        "title": "The Slow Rush",
+        "artist": "Tame Impala",
+        "image": "./img/disc1.png",
+        "price": 1300
+    },
+    {
+        "title": "Plastic Beach",
+        "artist": "Gorillaz",
+        "image": "./img/disc2.jpg",
+        "price": 1100
+    },
+    {
+        "title": "In The Court Of The Crimson King",
+        "artist": "King Crimson",
+        "image": "./img/disc4.jpg",
+        "price": 1500
+    },
+    {
+        "title": "Holy Diver",
+        "artist": "DIO",
+        "image": "./img/disc3.jpg",
+        "price": 1500
+    },
+    {
+        "title": "Wish You Were Here",
+        "artist": "Pink Floyd",
+        "image": "./img/disc5.jpg",
+        "price": 1700
+    },
+    {
+        "title": "Rumours",
+        "artist": "Fleetwood Mac",
+        "image": "./img/disc6.jpg",
+        "price": 1300
+    },
+    {
+        "title": "Sweetener",
+        "artist": "Ariana Grande",
+        "image": "./img/disc7.jpg",
+        "price": 1200
+    },
+    {
+        "title": "Aladdin Sane",
+        "artist": "David Bowie",
+        "image": "./img/disc8.jpg",
+        "price": 1000
+    },
+    {
+        "title": "The Dark Side Of The Moon",
+        "artist": "Pink Floyd",
+        "image": "./img/disc9.jpg",
+        "price": 1800
+    },
+    {
+        "title": "Unknown Pleasures",
+        "artist": "Joy Division",
+        "image": "./img/disc10.jpg",
+        "price": 1300
+    },
+    {
+        "title": "Come Fly With Me",
+        "artist": "Frank Sinatra",
+        "image": "./img/disc11.jpg",
+        "price": 1550
+    },
+    {
+        "title": "Blond",
+        "artist": "Frank Ocean",
+        "image": "./img/disc12.jpg",
+        "price": 1300
+    }
+]

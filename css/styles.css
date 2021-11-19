@@ -173,12 +173,10 @@ footer {
 }
 .cards a p {
   position: relative;
-  bottom: 5px;
   font-family: "Montserrat", sans-serif;
   color: #f98948;
   background-color: #f4f1bb;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  margin: 0px;
   height: 55px;
 }
 .cards a img {
@@ -186,8 +184,43 @@ footer {
   margin: 0px;
   border-radius: 10px 10px 0px 0px;
 }
+.cards a div {
+  margin: 0px;
+  padding: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #f4f1bb;
+}
+.cards a div button {
+  color: #ffffff;
+  background-color: #f98948;
+  padding: 5px;
+  border: 2px solid #f4f1bb;
+  width: 125px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.cards a div button:hover {
+  background-color: #f4f1bb;
+  color: #f98948;
+  border: 2px solid #f98948;
+}
 .cards:hover {
-  transform: translate(-10px, -10px);
+  transform: translate(-5px, -5px);
+}
+
+#dropdownMenuButton1 {
+  background-color: #f98948;
+}
+
+.dropdown-menu {
+  max-height: 200px;
+  width: 40vw;
+  overflow-y: scroll;
+}
+.dropdown-menu li {
+  width: 100%;
 }
 
 .about-container {
