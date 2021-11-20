@@ -4,11 +4,12 @@ const VINYLS_URL = "../data/products.json";
 class ProductCart {
     constructor() {
         this.list = [];
+        this.purchaseUrl = "https://61986f4c164fa60017c2307b.mockapi.io/api/v1/ShopCarts";
     }
 
     init() {
         let cartString = window.localStorage.getItem("vinylrec-cart");
-        if (cartString != null || cartString != "") {
+        if (cartString != null && cartString != "") {
             this.list = JSON.parse(cartString);
             this.render();
         }
@@ -28,12 +29,33 @@ class ProductCart {
     clear() {
         this.list = [];
         this.save();
+        this.render();
     }
 
     delete(index) {
         this.list.splice(index, 1);
         this.save();
         this.render();
+    }
+
+    postPurchase() {
+        if (this.list.length == 0) {
+            return JSON.parse('{"error": "There are no items in the cart."}');
+        }
+        fetch(this.purchaseUrl, this.postPurchase, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ createdAt: Date.now(), vinyls: this.list }),
+        }).then((res) => {
+            if (res.ok) {
+                alert("Compra realizada con éxito.");
+                shopCart.clear();
+            } else {
+                alert("Algo ha fallado con tu compra, por favor intenta de nuevo.");
+            }
+        });
     }
 
     render() {
@@ -49,9 +71,13 @@ class ProductCart {
             </span></div>`;
             $("#shopcart_list").append(elem);
         });
-        let elem = document.createElement("li");
-        elem.innerHTML = `<div class="dropdown-item d-flex justify-content-between">Cantidad de productos: ${counter} | Total: ${totalSum}</div>`;
-        $("#shopcart_list").append(elem);
+        let total = document.createElement("li");
+        total.innerHTML = `<div class="d-flex justify-content-center">Cantidad de productos: ${counter} | Total: ${totalSum}</div>`;
+        $("#shopcart_list").append(total);
+        let buyBtn = document.createElement("li");
+        buyBtn.innerHTML = `<div class="d-flex justify-content-center"><button class="card__btn"> Comprar </button></div>`;
+        buyBtn.addEventListener("click", purchaseCart);
+        $("#shopcart_list").append(buyBtn);
         $(".delete_item").on("click", deleteFromCart);
     }
 }
@@ -84,6 +110,12 @@ $.ajax({
 });
 
 //Event listeners
+
+function purchaseCart(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    shopCart.postPurchase();
+}
 
 function addToCart(e) {
     e.preventDefault();

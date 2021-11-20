@@ -191,23 +191,24 @@ footer {
   border-bottom-left-radius: 10px;
   background-color: #f4f1bb;
 }
-.cards a div button {
+.cards:hover {
+  transform: translate(-5px, -5px);
+}
+
+.card__btn {
   color: #ffffff;
   background-color: #f98948;
-  padding: 5px;
+  padding: 3px;
   border: 2px solid #f4f1bb;
   width: 125px;
   height: 40px;
   border-radius: 10px;
   font-size: 1rem;
 }
-.cards a div button:hover {
+.card__btn:hover {
   background-color: #f4f1bb;
   color: #f98948;
   border: 2px solid #f98948;
-}
-.cards:hover {
-  transform: translate(-5px, -5px);
 }
 
 #dropdownMenuButton1 {
