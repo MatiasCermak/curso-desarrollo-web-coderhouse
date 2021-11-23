@@ -23,6 +23,7 @@ class ProductCart {
     append(product) {
         this.list.push(product);
         this.save();
+        alert(`${product.title} añadido al carrrito con éxito.`);
         this.render();
     }
 
@@ -40,7 +41,8 @@ class ProductCart {
 
     postPurchase() {
         if (this.list.length == 0) {
-            return JSON.parse('{"error": "There are no items in the cart."}');
+            alert("No posees discos en tu carrito.");
+            return;
         }
         fetch(this.purchaseUrl, this.postPurchase, {
             method: "POST",
@@ -76,7 +78,7 @@ class ProductCart {
         $("#shopcart_list").append(total);
         let buyBtn = document.createElement("li");
         buyBtn.innerHTML = `<div class="d-flex justify-content-center"><button class="card__btn"> Comprar </button></div>`;
-        buyBtn.addEventListener("click", purchaseCart);
+        buyBtn.children[0].addEventListener("click", purchaseCart);
         $("#shopcart_list").append(buyBtn);
         $(".delete_item").on("click", deleteFromCart);
     }
